@@ -5,11 +5,26 @@ import webbrowser
 # Use this function to play a video from the internet
 def play_video(url):
     webbrowser.open(url)
+def frog_video(url):
+    webbrowser.open(url)
 
 # =================== DO NOT MODIFY THE CODE ABOVE ===========================
 
 
 if __name__ == '__main__':
+    window = Tk()
+    window.withdraw()
+    message = simpledialog.askinteger(title = 'Number of Cats', prompt = "How many cats do you have?\n Enter a number:")
+
+    if message >= 3:
+        messagebox.showinfo('Wow', 'You are a crazy cat lady!')
+    elif message < 3 and message > 0:
+        play_video("https://www.youtube.com/watch?v=mifHo9fC5QI")
+
+    else:
+        frog_video("https://www.youtube.com/watch?v=T7Sj3nJtpb8")
+
+
     # TODO 1) Make a new window variable, window = Tk()
     #      2) Hide the window using the window's .withdraw() method
     #      3) Ask the user how many cats they have
